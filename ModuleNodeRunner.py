@@ -83,7 +83,7 @@ class ModuleNodeRunner(NodeExecHandler):
             raise Exception(errMessage)
         paraStr = ''
         for i in xrange(1, paraNum + 1):
-            paraStr = paraStr + '-p' + str(i) + ' ' + fields[i] + ' '
+            paraStr = paraStr + '-p' + str(i) + ' ' + "'" + fields[i] + "'" + ' '
         return paraStr
     def getCommandArgument(self):
         fullMainFilePath = self.item.fileLocation
